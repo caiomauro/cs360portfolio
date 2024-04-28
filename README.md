@@ -1,0 +1,28 @@
+# Briefly summarize the requirements and goals of the app you developed. What user needs was this app designed to address?
+PagePal is designed to be reading habit builder that gives it's users tools to imporve thier reading consistency. The app required a login/logout/register system, local database, and data dashboard to track user progress. Users are able to log thier reading progress
+and see it visualized. This helps materialize thier progress and make it more interactive. All of this ties together and will hopefully encourage users to read more and more consistently.
+
+# What screens and features were necessary to support user needs and produce a user-centered UI for the app? How did your UI designs keep users in mind? Why were your designs successful?
+•	User Authentication: Allows users to log in to access their data or create an account. For this, we will need a login and registration page for users to interact with. In the database, we will need a table to store the user’s data for authentication and assign each user a unique ID.
+•	Dashboard Screen: Displays the user's reading progress over the past 7 days, average pages read, and progress toward their goal. For this, we will need one main page with a progress bar and a grid showing daily reading to visualize the user’s data. In the database, I will create a table for daily readings and another to store each user's reading goal. This separation will make it easier to query the database.
+•	Daily Reading Log Screen: Enables users to log their daily reading. There will be a plus sign on the dashboard that will take the user to a simple page with a button and a text entry field. All users need to do is enter the number of pages they read and click to add. This page may also include an option to edit the pages read in case of a typo. There will also be heavy input validation to ensure that we receive integers from the user.
+•	Goal Setting Screen: Allows users to set or update their reading goal. This screen will contain customization settings, buttons, and fields to add data. Users should be able to choose the timeframe for their goal and receive calculations for how many pages they need to read per day to achieve it. This data will be stored in its own table for flexibility. There may be columns for timeframes like 1 week, 2 weeks, 1 month, 3 months, etc. Users can then select their desired timeframe for their goal within the app.
+•	Notification System: Notifies users when they reach their reading goal. This system will check the current time every half hour and determine if a notification is necessary. Users will be able to set a reminder time, preferably a time when they typically have available reading time. Once the set time is reached, the program will compare the user's current reading progress against their goal requirements and notify them of the remaining pages needed to stay on track.
+
+# How did you approach the process of coding your app? What techniques or strategies did you use? How could those be applied in the future?
+My process to code this app invloved a lot of planning to make sure that I was going to meet the requirements in an efficient manner. I started by developing mock drawings of the UI and then moving to a task tree. I planned it so that each task I completed would unlock
+the possibility to implement the next task. This techinique is something that I will always use and that I see the most success with when building something from the ground up. The system allows me to create things in an adaptive linear format. It saves me time from
+trying to add something only for it to require me to develop a whole other feature.
+
+# How did you test to ensure your code was functional? Why is this process important and what did it reveal?
+To test my functionality I did a lot of user testing. I navigated the application with the intent to break things and find issues. This testing combined with lots of error handling created a very strong application. When testing like this I actually found a couple bugs 
+one of them was that the delete function I implemented was not deleting the data properly and it would still be on the database. So even though it was initially gone from the users screen the log would appear when the logged in again. I also found that if a user spam
+clicked the login button the whole app would crash. My testing method allowed me to find these issues and fix them before finalizing my code.
+
+# Considering the full app design and development process, from initial planning to finalization, where did you have to innovate to overcome a challenge?
+One challenge I faced was in developing the transition between the multiple pages in the application. I had no idea how to create multiple views or how I would let users know where they were supposed to go. Figuring out how to develop an app that was easy to navigate was
+a big challenge. In order to overcome this challenge I decided to spend some time using mobile apps and taking notes about what was good to navigate. By doing this I got a really good sense of where components should be for the app to provide a good user experience.
+
+# In what specific component from your mobile app were you particularly successful in demonstrating your knowledge, skills, and experience?
+I think I was the most successful with the grid component. I was able to create a grid that allows users to click on cells to either edit the number of pages they read or to delete that cell. This showed my ability to create UI components to allow for the functionality as
+well as to develop backend functions in my database handler file to complete the users requests.
